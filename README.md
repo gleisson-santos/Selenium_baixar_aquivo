@@ -1,6 +1,8 @@
 # Selenium_baixar_aquivo
  Pequeno codigo em Selenium para acessar site, baixar o arquivo e tratar com o pandar. 
-
+ 
+ 
+```python
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -27,6 +29,7 @@ time.sleep(5)
 #Tratativa do Pup up
    
 driver.find_element(By.CLASS_NAME, "download-data_text__1gHMw").click()
+```
 
 
 ![image](https://user-images.githubusercontent.com/33934341/195913955-17a451c2-f1c8-48a2-9d09-699a16942071.png)
@@ -34,6 +37,7 @@ driver.find_element(By.CLASS_NAME, "download-data_text__1gHMw").click()
 
 
 
+```python
 #Importar e tratar arquivo/DataFrame
 import os
 import glob
@@ -50,5 +54,6 @@ for f in files_csv:
     data = pd.read_csv(f)
     df = df.append(data)
 display(df)
+```
 
 ![image](https://user-images.githubusercontent.com/33934341/195913980-ab62a6c0-f8cb-4e01-bdbf-f099a91dcedb.png)
